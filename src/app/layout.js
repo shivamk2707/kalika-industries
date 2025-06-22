@@ -32,14 +32,14 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://kalikafurniture.com'),
+  metadataBase: new URL('https://kalikafurniture.vercel.app'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: "Kalika Furniture - Premium Furniture & Home Furnishings",
     description: "Discover exquisite furniture, curtains, blinds, mattresses, and home furnishings from Kalika Furniture. Quality craftsmanship meets modern design.",
-    url: 'https://kalikafurniture.com',
+    url: 'https://kalikafurniture.vercel.app',
     siteName: 'Kalika Furniture',
     images: [
       {
