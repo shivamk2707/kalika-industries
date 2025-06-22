@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Kalika Furniture - Premium Furniture & Home Furnishings
+
+A modern, responsive website for Kalika Furniture, showcasing premium furniture and home furnishings. Built with Next.js 15, React 19, and Tailwind CSS.
+
+## Features
+
+- 🛋️ **Comprehensive Product Showcase** - Sofas, beds, dining sets, wardrobes, curtains, blinds, and mattresses
+- 🎨 **Modern UI/UX Design** - Beautiful, responsive design with smooth animations
+- 📱 **Mobile-First Approach** - Optimized for all devices and screen sizes
+- ⚡ **Performance Optimized** - Built with Next.js 15 and React 19 for optimal performance
+- 🎯 **SEO Friendly** - Proper meta tags and structured data
+- 🔍 **Search Functionality** - Integrated search for products
+- 📞 **Contact Forms** - Easy communication with customers
+- 🗺️ **Location Integration** - Store location and mapping
+
+## Tech Stack
+
+- **Framework**: Next.js 15
+- **Language**: JavaScript (React 19)
+- **Styling**: Tailwind CSS 4
+- **Icons**: React Icons
+- **Carousel**: React Slick
+- **Fonts**: Google Fonts (Inter, Playfair Display, Poppins)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd kalika-furniture
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+kalika-furniture/
+├── src/
+│   ├── app/                 # Next.js App Router
+│   │   ├── layout.js       # Root layout
+│   │   ├── page.js         # Home page
+│   │   └── globals.css     # Global styles
+│   └── components/         # React components
+│       ├── Header.js       # Navigation header
+│       ├── Footer.js       # Site footer
+│       ├── AboutUs.js      # About section
+│       ├── ContactUs.js    # Contact form
+│       ├── Furniture.js    # Furniture showcase
+│       ├── Gallery.js      # Product gallery
+│       └── ...            # Other components
+├── public/                 # Static assets
+└── package.json           # Dependencies and scripts
+```
 
-## Learn More
+## Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Branding
+- Update company information in `src/app/layout.js`
+- Modify contact details in `src/components/ContactUs.js`
+- Change logo and branding in `src/components/Header.js`
 
-## Deploy on Vercel
+### Styling
+- Customize colors in `tailwind.config.mjs`
+- Modify component styles in individual component files
+- Update global styles in `src/app/globals.css`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The easiest way to deploy this Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+
+## Contact
+
+For any questions or support, please contact:
+- Email: kalikafurniture@gmail.com
+- Phone: +91 9850004078
+
+## License
+
+This project is private and proprietary to Kalika Furniture.
+
+---
+
+Built with ❤️ for Kalika Furniture

@@ -38,7 +38,7 @@ const Footer = () => {
       <div className="bg-gray-900/95 py-6 text-center text-xs sm:text-sm border-t border-gray-800">
         <div className="container mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <div>
-            <p className="mb-1 sm:mb-0">&copy; {new Date().getFullYear()} <span className="font-semibold text-brand-green">Kalika Industries</span>. All Rights Reserved.</p>
+            <p className="mb-1 sm:mb-0">&copy; {new Date().getFullYear()} <span className="font-semibold text-brand-green">Kalika Furniture</span>. All Rights Reserved.</p>
           </div>
           <div>
             <p>

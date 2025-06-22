@@ -1,7 +1,8 @@
 {
-  "name": "furniture_app_2",
+  "name": "kalika-furniture",
   "version": "0.1.0",
   "private": true,
+  "description": "Kalika Furniture - Premium Furniture & Home Furnishings Website",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",

@@ -8,16 +8,16 @@ import { FaChevronLeft, FaChevronRight, FaQuoteLeft, FaStar } from 'react-icons/
 
 const testimonials = [
   {
-    title: 'Royal Furnitures',
-    description: 'Shop from our latest designs of furniture to bring your home to life',
+    title: 'Premium Living Room Collection',
+    description: 'Kalika Furniture transformed our living room with their exquisite sofa collection. The quality and craftsmanship exceeded our expectations.',
     image: 'https://img.freepik.com/premium-photo/luxurious-living-room-interior-with-beautiful-old-carved-furniture-gold-color-with-decorations-walls-style-royal-palace_267786-509.jpg?ga=GA1.1.990952046.1750501572&semt=ais_hybrid&w=740',
     rating: 5,
     author: 'Sarah Johnson',
     position: 'Interior Designer'
   },
   {
-    title: 'Com Furnitures',
-    description: 'Explore from a wide range of options to furnish your dream home',
+    title: 'Complete Home Makeover',
+    description: 'From bedroom furniture to dining sets, Kalika Furniture provided everything we needed. Their design team helped us create the perfect home.',
     image: 'https://img.freepik.com/free-photo/couch-with-two-cushions_1203-38.jpg?ga=GA1.1.990952046.1750501572&semt=ais_hybrid&w=740',
     rating: 5,
     author: 'Michael Chen',

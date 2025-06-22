@@ -21,32 +21,32 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Handicraft - Premium Furniture & Home Furnishings",
-  description: "Discover exquisite furniture, curtains, blinds, mattresses, and home furnishings. Quality craftsmanship meets modern design. Free delivery across India.",
-  keywords: "furniture, home furnishings, sofas, beds, dining sets, curtains, blinds, mattresses, handicraft, interior design",
-  authors: [{ name: "Handicraft" }],
-  creator: "Handicraft",
-  publisher: "Handicraft",
+  title: "Kalika Furniture - Premium Furniture & Home Furnishings",
+  description: "Discover exquisite furniture, curtains, blinds, mattresses, and home furnishings from Kalika Furniture. Quality craftsmanship meets modern design. Free delivery across India.",
+  keywords: "furniture, home furnishings, sofas, beds, dining sets, curtains, blinds, mattresses, kalika furniture, interior design, furniture store",
+  authors: [{ name: "Kalika Furniture" }],
+  creator: "Kalika Furniture",
+  publisher: "Kalika Furniture",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://handicraft.com'),
+  metadataBase: new URL('https://kalikafurniture.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "Handicraft - Premium Furniture & Home Furnishings",
-    description: "Discover exquisite furniture, curtains, blinds, mattresses, and home furnishings. Quality craftsmanship meets modern design.",
-    url: 'https://handicraft.com',
-    siteName: 'Handicraft',
+    title: "Kalika Furniture - Premium Furniture & Home Furnishings",
+    description: "Discover exquisite furniture, curtains, blinds, mattresses, and home furnishings from Kalika Furniture. Quality craftsmanship meets modern design.",
+    url: 'https://kalikafurniture.com',
+    siteName: 'Kalika Furniture',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Handicraft - Premium Furniture Store',
+        alt: 'Kalika Furniture - Premium Furniture Store',
       },
     ],
     locale: 'en_US',
@@ -54,8 +54,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Handicraft - Premium Furniture & Home Furnishings",
-    description: "Discover exquisite furniture, curtains, blinds, mattresses, and home furnishings. Quality craftsmanship meets modern design.",
+    title: "Kalika Furniture - Premium Furniture & Home Furnishings",
+    description: "Discover exquisite furniture, curtains, blinds, mattresses, and home furnishings from Kalika Furniture. Quality craftsmanship meets modern design.",
     images: ['/images/twitter-image.jpg'],
   },
   robots: {
@@ -91,8 +91,8 @@ export default function RootLayout({ children }) {
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Handicraft" />
-        <meta name="application-name" content="Handicraft" />
+        <meta name="apple-mobile-web-app-title" content="Kalika Furniture" />
+        <meta name="application-name" content="Kalika Furniture" />
         <meta name="msapplication-TileColor" content="#6A8F4D" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
       </head>

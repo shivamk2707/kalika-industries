@@ -68,23 +68,25 @@ const AboutUs = () => {
             <div className="space-y-6">
               <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-gray-100/50 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros vitae nisl aliquam ultricies. Donec in velit in ante consectetur mollis. 
-                  Phasellus vitae massa sit amet libero imperdietBlandit. Quisque accumsan, arcu nec euismod tincidunt, velit elit venenatis justo, a consectetur lorem dolor non risus.
+                  Welcome to Kalika Furniture, your trusted destination for premium furniture and home furnishings. With over 15 years of experience in the furniture industry, 
+                  we have been serving customers across India with quality products and exceptional service. Our journey began with a simple mission: to provide beautiful, 
+                  durable, and affordable furniture that transforms houses into homes.
                 </p>
               </div>
               
               <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-gray-100/50 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  Nullam at elementum magna. Vivamus eget dictum elit. Integer sit amet ligula eu nulla dignissim euismod. 
-                  Suspendisse potenti. In hac habitasse platea dictumst. Morbi eget justo at ex ultrices varius. 
-                  Aliquam erat volutpat. Proin non vulputate nulla, a tempus urna.
+                  At Kalika Furniture, we understand that every home is unique, and every family has different needs. That&apos;s why we offer a comprehensive range of furniture 
+                  including sofas, beds, dining sets, wardrobes, curtains, blinds, and mattresses. Our expert design team works closely with customers to create personalized 
+                  solutions that match their style preferences and budget requirements.
                 </p>
               </div>
               
               <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-gray-100/50 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  Cras et sem at ipsum tincidunt pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
-                  Donec a ante quis nunc venenatis facilisis. Integer ac felis eget massa.
+                  We take pride in our commitment to quality craftsmanship, using only the finest materials and latest manufacturing techniques. Our products are designed 
+                  to withstand the test of time while maintaining their beauty and functionality. With our nationwide delivery network and excellent after-sales support, 
+                  we ensure a seamless shopping experience for all our valued customers.
                 </p>
               </div>
             </div>

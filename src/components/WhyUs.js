@@ -6,23 +6,23 @@ import { FaTree, FaWrench, FaShippingFast, FaAward } from 'react-icons/fa';
 const features = [
   {
     icon: <FaTree className="text-4xl text-brand-red" />,
-    title: 'BEST WOODS & OFFICE',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'PREMIUM MATERIALS',
+    description: 'We use only the finest quality woods and materials sourced from trusted suppliers to ensure durability and beauty in every piece.',
   },
   {
     icon: <FaWrench className="text-4xl text-brand-red" />,
-    title: 'FREE ASSEMBLING',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'FREE ASSEMBLY',
+    description: 'Our expert team provides free assembly and installation services to ensure your furniture is perfectly set up in your home.',
   },
   {
     icon: <FaShippingFast className="text-4xl text-brand-red" />,
-    title: 'ON TIME DELIVERY',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'ON-TIME DELIVERY',
+    description: 'We guarantee timely delivery across India with our extensive logistics network and professional delivery team.',
   },
   {
     icon: <FaAward className="text-4xl text-brand-red" />,
-    title: 'ASSURED QUALITY',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'QUALITY ASSURANCE',
+    description: 'Every product undergoes rigorous quality checks and comes with comprehensive warranty coverage for your peace of mind.',
   },
 ];
 

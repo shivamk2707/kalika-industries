@@ -34,7 +34,7 @@ const ContactUs = () => {
     {
       icon: <FaEnvelope className="text-2xl sm:text-3xl" />,
       title: 'General Enquiries',
-      details: ['kalikaindustries@gmail.com'],
+      details: ['kalikafurniture@gmail.com'],
       color: 'from-blue-500 to-cyan-600'
     },
     {
