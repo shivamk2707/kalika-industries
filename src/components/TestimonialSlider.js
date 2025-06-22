@@ -147,7 +147,7 @@ const TestimonialSlider = () => {
                         
                         {/* Description */}
                         <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
-                          "{testimonial.description}"
+                          &ldquo;{testimonial.description}&rdquo;
                         </p>
                         
                         {/* Author */}

@@ -76,7 +76,7 @@ const ContactUs = () => {
             <div className="w-8 sm:w-16 h-0.5 bg-gradient-to-l from-transparent to-emerald-500 rounded-full"></div>
           </div>
           <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed px-4">
-            We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
           </p>
         </div>
         
