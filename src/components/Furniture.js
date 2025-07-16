@@ -192,7 +192,7 @@ const Furniture = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 font-serif mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 font-serif mb-4 mt-10">
             Premium Furniture Collection
           </h2>
           <div className="w-24 h-1 bg-gradient-primary mx-auto mb-6 rounded-full"></div>

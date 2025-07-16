@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   FaPhone,
   FaEnvelope,
@@ -17,6 +17,10 @@ import {
   FaChevronDown,
   FaChevronRight,
 } from "react-icons/fa";
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import navLinks from '../data/navLinks';
+import megaMenuData from '../data/megaMenuData';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -25,6 +29,11 @@ const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeMenu, setActiveMenu] = useState(null);
   const [searchFocused, setSearchFocused] = useState(false);
+  const [hovered, setHovered] = useState(null);
+  const [megaMenuOpen, setMegaMenuOpen] = useState(false);
+  const [megaMenuPosition, setMegaMenuPosition] = useState('center'); // 'center', 'left', 'right'
+  const megaMenuRef = useRef(null);
+  const navItemRefs = useRef({});
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,6 +42,25 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Adjust mega menu position to prevent overflow
+  useEffect(() => {
+    if (megaMenuOpen && hovered && megaMenuRef.current && navItemRefs.current[hovered]) {
+      const menuRect = megaMenuRef.current.getBoundingClientRect();
+      const navRect = navItemRefs.current[hovered].getBoundingClientRect();
+      const viewportWidth = window.innerWidth;
+      // Calculate the left position of the menu if centered
+      const menuLeft = navRect.left + navRect.width / 2 - menuRect.width / 2;
+      const menuRight = menuLeft + menuRect.width;
+      if (menuLeft < 8) {
+        setMegaMenuPosition('left');
+      } else if (menuRight > viewportWidth - 8) {
+        setMegaMenuPosition('right');
+      } else {
+        setMegaMenuPosition('center');
+      }
+    }
+  }, [megaMenuOpen, hovered]);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -99,10 +127,10 @@ const Header = () => {
               <div className="flex items-center group">
                 <FaEnvelope className="text-brand-green text-sm sm:text-base transition-transform group-hover:scale-110 mr-1 sm:mr-2" />
                 <a
-                  href="mailto:kalikaindustries@gmail.com"
+                  href="mailto:kalikafurniture@gmail.com"
                   className="text-xs sm:text-sm group-hover:text-brand-green transition-colors break-all sm:break-normal"
                 >
-                  kalikaindustries@gmail.com
+                  kalikafurniture@gmail.com
                 </a>
               </div>
             </div>
@@ -144,7 +172,7 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center">
               <div className="text-2xl md:text-3xl font-bold text-brand-red font-display hover:scale-105 transition-transform">
-                <span className="text-brand-green">Kalika </span>Industries
+                <span className="text-brand-green">Kalika </span>Furniture
               </div>
             </div>
 
@@ -287,153 +315,122 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Desktop Navigation - Enhanced - Adjusted padding when scrolled */}
+      {/* Desktop Navigation - Animated Mega Menu */}
       <nav className={`hidden lg:block bg-white border-b border-neutral-100 shadow-sm transition-all duration-300 ${
         isScrolled ? "py-1" : "py-0"
       }`}>
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
-            {/* Mega Menu Trigger */}
-            <div
-              className="relative"
-              onMouseEnter={() => setActiveMenu("categories")}
-              onMouseLeave={() => setActiveMenu(null)}
-            >
-              <button className="bg-brand-green hover:bg-brand-dark-green text-white px-6 py-3 flex items-center space-x-2 font-medium transition-all duration-300 rounded-t-lg">
-                <FaBars />
-                <span>SHOP BY CATEGORY</span>
-                <FaChevronDown
-                  className={`transition-transform duration-200 ${
-                    activeMenu === "categories" ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-
-              {/* Mega Menu Dropdown */}
-              {activeMenu === "categories" && (
-                <div className="absolute left-0 w-full bg-white shadow-xl rounded-b-lg animate-fade-in z-20">
-                  <div className="grid grid-cols-3 gap-8 p-6">
-                    {categories.map((category) => (
-                      <a
-                        key={category.name}
-                        href={category.href}
-                        className="group flex items-start space-x-3 p-3 hover:bg-neutral-50 rounded-lg transition-all duration-200"
-                      >
-                        <div className="text-2xl">{category.icon}</div>
-                        <div>
-                          <h4 className="font-medium text-neutral-800 group-hover:text-brand-green transition-colors">
-                            {category.name}
-                          </h4>
-                          <p className="text-xs text-neutral-500 mt-1 group-hover:text-neutral-700 transition-colors">
-                            Shop our {category.name.toLowerCase()} collection
-                          </p>
-                        </div>
-                        <FaChevronRight className="ml-auto text-neutral-400 group-hover:text-brand-green transition-colors" />
-                      </a>
-                    ))}
-                  </div>
-                  <div className="bg-neutral-50 px-6 py-3 border-t border-neutral-200 flex justify-between items-center">
-                    <span className="text-sm text-neutral-600">
-                      Need help choosing?
-                    </span>
-                    <a
-                      href="#"
-                      className="text-brand-green hover:underline font-medium text-sm"
-                    >
-                      Contact our design experts →
-                    </a>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Main Navigation */}
-            <div className="flex space-x-1">
-              {navItems.map((item) => (
+          <div className="flex items-center justify-center relative">
+            <ul className="flex items-center">
+              {navLinks.map((link, index) => (
                 <div
-                  key={item.name}
-                  className="relative"
-                  onMouseEnter={() => setActiveMenu(item.name)}
-                  onMouseLeave={() => setActiveMenu(null)}
+                  key={link.href}
+                  className="relative group"
+                  ref={el => navItemRefs.current[link.label] = el}
+                  onMouseEnter={() => {
+                    setHovered(link.label);
+                    if (megaMenuData[link.label]) setMegaMenuOpen(true);
+                  }}
+                  onMouseLeave={() => {
+                    setHovered(null);
+                    setMegaMenuOpen(false);
+                  }}
                 >
-                  <a
-                    href={item.href}
-                    className={`px-5 py-3.5 font-semibold flex items-center space-x-1.5 transition-all duration-300 ${
-                      activeMenu === item.name
-                        ? "text-white bg-gradient-to-r from-brand-green to-emerald-600 rounded-lg shadow-lg"
-                        : "text-neutral-700 hover:text-white hover:bg-gradient-to-r hover:from-brand-green/80 hover:to-emerald-600/80 rounded-lg"
-                    } relative overflow-hidden group`}
-                  >
-                    {/* Animated background layer */}
-                    <span className="absolute inset-0 bg-gradient-to-r from-brand-green to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></span>
-
-                    <span className="relative">
-                      {item.name}
-                      <span
-                        className={`absolute -bottom-1 left-0 h-[2px] bg-white transition-all duration-500 ${
-                          activeMenu === item.name
-                            ? "w-full"
-                            : "w-0 group-hover:w-full"
-                        }`}
-                      ></span>
-                    </span>
-
-                    {item.subItems && (
-                      <FaChevronDown
-                        className={`text-xs transition-all duration-300 ${
-                          activeMenu === item.name
-                            ? "rotate-180 text-white"
-                            : "text-neutral-500 group-hover:text-white"
-                        }`}
-                      />
-                    )}
-                  </a>
-
-                  {/* Premium Submenu Dropdown */}
-                  {item.subItems && activeMenu === item.name && (
-                    <div className="absolute left-0 mt-1 w-64 bg-white shadow-2xl rounded-lg border border-gray-200 animate-fade-in z-30 overflow-hidden backdrop-blur-sm bg-white/95">
-                      <div className="p-1.5">
-                        {item.subItems.map((subItem) => (
-                          <a
-                            key={subItem.name}
-                            href={subItem.href}
-                            className="flex items-center justify-between px-4 py-2.5 rounded-md hover:bg-emerald-50 transition-all duration-200 group"
-                          >
-                            <div className="flex items-center">
-                              <span className="w-2 h-2 bg-brand-green rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                              <span className="text-neutral-700 group-hover:text-brand-green font-medium transition-colors">
-                                {subItem.name}
-                              </span>
-                            </div>
-                            <FaChevronRight className="text-xs text-transparent group-hover:text-brand-green transition-colors duration-300" />
-                          </a>
-                        ))}
-                      </div>
-
-                      {/* Optional: View All CTA */}
-                      <div className="border-t border-gray-100 px-4 py-2.5 bg-gray-50/50">
-                        <a
-                          href="#"
-                          className="text-xs font-semibold text-brand-green hover:text-emerald-700 flex items-center justify-end transition-colors"
-                        >
-                          View All <FaChevronRight className="ml-1 text-xs" />
-                        </a>
-                      </div>
-                    </div>
+                  <li>
+                    <Link
+                      href={link.href}
+                      className={`block px-5 py-4 text-sm font-semibold tracking-wide transition-colors duration-300 border-r border-gray-200/50
+                        ${link.label === 'Premium Furniture' ? 'text-[#7a294a] font-bold hover:text-[#a13c6a]' : link.label === 'Mattress' ? 'text-blue-800 font-bold hover:text-blue-600' : 'text-neutral-800 hover:text-brand-green'}
+                        ${index === navLinks.length - 1 ? 'border-r-0' : ''}`}
+                    >
+                      {link.label}
+                      <span className="absolute -bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+                    </Link>
+                  </li>
+                  {/* Mega Menu */}
+                  {megaMenuOpen && hovered === link.label && megaMenuData[hovered] && (
+                    <AnimatePresence>
+                      <motion.div
+                        ref={megaMenuRef}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 20 }}
+                        transition={{ duration: 0.25, ease: "easeOut" }}
+                        className={`absolute top-full mt-2 w-[960px] bg-white shadow-2xl rounded-xl border border-gray-100 z-50 overflow-hidden
+                          ${megaMenuPosition === 'center' ? 'left-1/2 -translate-x-1/2' : ''}
+                          ${megaMenuPosition === 'left' ? 'left-0 translate-x-0' : ''}
+                          ${megaMenuPosition === 'right' ? 'right-0 translate-x-0' : ''}
+                        `}
+                        style={{ maxWidth: '98vw' }}
+                      >
+                        <div className="flex bg-gradient-to-b from-white to-gray-50/50">
+                          {/* Left: Subcategories */}
+                          <div className="w-1/3 p-8 border-r border-gray-200/50">
+                            <h3 className="font-bold text-gray-800 mb-5 text-sm uppercase tracking-wider">
+                              Categories
+                            </h3>
+                            <ul className="space-y-4">
+                              {megaMenuData[hovered].subcategories.map((cat, i) => (
+                                <li key={cat.name} className="group">
+                                  <Link
+                                    href={cat.link}
+                                    className="font-medium text-gray-700 hover:text-blue-600 transition-colors duration-300 text-sm relative"
+                                  >
+                                    {cat.name}
+                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+                                  </Link>
+                                  {cat.items && (
+                                    <ul className="ml-4 mt-3 space-y-2">
+                                      {cat.items.map(item => (
+                                        <li key={item.name}>
+                                          <Link
+                                            href={item.link}
+                                            className="text-gray-500 hover:text-blue-600 transition-colors duration-300 text-sm"
+                                          >
+                                            {item.name}
+                                          </Link>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  )}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          {/* Center: Image */}
+                          <div className="w-1/3 flex items-center justify-center p-8">
+                            <img
+                              src={megaMenuData[hovered].image}
+                              alt={hovered}
+                              className="max-h-56 object-contain rounded-lg shadow-sm transition-transform duration-300 hover:scale-105"
+                            />
+                          </div>
+                          {/* Right: Popular Categories */}
+                          <div className="w-1/3 p-8">
+                            <h3 className="font-bold text-gray-800 mb-5 text-sm uppercase tracking-wider">
+                              Popular Items
+                            </h3>
+                            <ul className="space-y-3">
+                              {megaMenuData[hovered].popular.map(cat => (
+                                <li key={cat.name} className="group">
+                                  <Link
+                                    href={cat.link}
+                                    className="text-gray-600 hover:text-blue-600 transition-colors duration-300 text-sm relative"
+                                  >
+                                    {cat.name}
+                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </motion.div>
+                    </AnimatePresence>
                   )}
                 </div>
               ))}
-            </div>
-
-            {/* Offers */}
-            <div className="text-sm font-medium">
-              <a
-                href="#offers"
-                className="text-brand-green hover:text-brand-dark-green hover:underline transition-colors duration-200 flex items-center"
-              >
-                <span className="mr-1">🔥</span> HOT DEALS
-              </a>
-            </div>
+            </ul>
           </div>
         </div>
       </nav>
@@ -445,7 +442,7 @@ const Header = () => {
             <div className="p-6">
               <div className="flex justify-between items-center mb-6 border-b pb-4">
                 <div className="text-2xl font-bold text-brand-red">
-                  <span className="text-brand-green">Kalika </span>Industries
+                  <span className="text-brand-green">Kalika </span>Furniture
                 </div>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -600,7 +597,7 @@ const Header = () => {
                       href="mailto:Handicraft@Example.com"
                       className="hover:text-brand-green transition-colors"
                     >
-                      kalikaindustries@gmail.com
+                      kalikafurniture@gmail.com
                     </a>
                   </div>
                 </div>

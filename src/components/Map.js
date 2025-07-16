@@ -44,7 +44,7 @@ const Map = () => {
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <FaGlobe className="text-brand-green w-4 h-4" />
-                <span className="text-gray-700">www.kalikaindustries.com</span>
+                <span className="text-gray-700">www.kalikafurniture.com</span>
               </div>
             </div>
             
