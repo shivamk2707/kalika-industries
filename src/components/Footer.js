@@ -40,14 +40,14 @@ const Footer = () => {
           <div>
             <p className="mb-1 sm:mb-0">&copy; {new Date().getFullYear()} <span className="font-semibold text-brand-green">Kalika Furniture</span>. All Rights Reserved.</p>
           </div>
-          <div>
+          {/* <div>
             <p>
               Powered by{' '}
               <a href="#" className="text-brand-green font-semibold hover:underline hover:text-emerald-400 transition-colors duration-200">
                 Shivam K
               </a>
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
