@@ -81,14 +81,6 @@ const AboutUs = () => {
                   solutions that match their style preferences and budget requirements.
                 </p>
               </div>
-              
-              <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-gray-100/50 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                <p className="text-gray-700 leading-relaxed text-lg">
-                  We take pride in our commitment to quality craftsmanship, using only the finest materials and latest manufacturing techniques. Our products are designed 
-                  to withstand the test of time while maintaining their beauty and functionality. With our nationwide delivery network and excellent after-sales support, 
-                  we ensure a seamless shopping experience for all our valued customers.
-                </p>
-              </div>
             </div>
             
             {/* Call to action */}

@@ -28,7 +28,7 @@ export default function Home() {
       <Mattresses />
       <OtherProducts />
       <AboutUs />
-      <WhyUs />
+      {/* <WhyUs /> */}
       <Gallery />
       <Videos />
       <TestimonialSlider />
