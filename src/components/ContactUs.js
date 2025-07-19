@@ -41,7 +41,7 @@ const ContactUs = () => {
       icon: <FaPhone className="text-2xl sm:text-3xl" />,
       title: 'Call Us',
       details: ['+91 9850004078'],
-      color: 'from-green-500 to-emerald-600'
+      color: 'from-yellow-900 to-yellow-700' // light brown gradient
     },
     {
       icon: <FaClock className="text-2xl sm:text-3xl" />,
@@ -52,32 +52,25 @@ const ContactUs = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-white via-slate-50 to-emerald-50 relative overflow-hidden">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-white via-slate-50 to-yellow-50 relative overflow-hidden">
       {/* Light theme background decorations */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute -top-32 -left-32 w-96 h-96 bg-gradient-to-br from-brand-green/10 to-emerald-200/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-to-tr from-emerald-100/30 to-brand-green/10 rounded-full blur-2xl -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-brand-green/10 to-emerald-200/20 rounded-full blur-3xl"></div>
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-gradient-to-br from-yellow-900/10 to-yellow-700/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-to-tr from-yellow-100/30 to-yellow-900/10 rounded-full blur-2xl -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-yellow-900/10 to-yellow-700/20 rounded-full blur-3xl"></div>
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-brand-green to-emerald-600 rounded-xl sm:rounded-2xl mb-4 sm:mb-6 shadow-lg">
-            <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 tracking-tight leading-tight">
+        <div className="text-center mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Get In Touch
-          </h2>
-          <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6 sm:mb-8">
-            <div className="w-8 sm:w-16 h-0.5 bg-gradient-to-r from-transparent to-brand-green rounded-full"></div>
-            <div className="w-12 sm:w-24 h-1 sm:h-1.5 bg-gradient-to-r from-brand-green to-emerald-500 rounded-full shadow-sm"></div>
-            <div className="w-8 sm:w-16 h-0.5 bg-gradient-to-l from-transparent to-emerald-500 rounded-full"></div>
-          </div>
-          <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed px-4">
+            </h2>
+            <div className="w-24 h-1 bg-gray-300 mx-auto mb-6"></div>
+            <p className="text-gray-600 max-w-2xl mx-auto">
             We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
-          </p>
+            </p>
+          </div>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
@@ -94,7 +87,7 @@ const ContactUs = () => {
                     {info.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 group-hover:text-brand-green transition-colors duration-300">
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 group-hover:text-yellow-900 transition-colors duration-300">
                       {info.title}
                     </h3>
                     {info.details.map((detail, detailIndex) => (
@@ -108,7 +101,7 @@ const ContactUs = () => {
             ))}
             
             {/* Additional info card */}
-            <div className="bg-gradient-to-br from-brand-green to-emerald-600 rounded-2xl p-6 text-white">
+            <div className="bg-gradient-to-br from-yellow-900 to-yellow-700 rounded-2xl p-6 text-white">
               <h3 className="text-xl font-bold mb-3">Why Choose Us?</h3>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-center gap-2">
@@ -132,7 +125,7 @@ const ContactUs = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-4 sm:mb-6">Send us a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 md:space-y-6">
               <div className="relative">
-                <div className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 text-emerald-800">
+                <div className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 text-yellow-800">
                   <FaUser className="w-5 h-5" />
                 </div>
                 <input 
@@ -141,7 +134,7 @@ const ContactUs = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   placeholder="Your Name" 
-                  className="w-full pl-10 sm:pl-12 pr-3 sm:pr-4 py-3 sm:py-4 mb-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-green focus:border-transparent transition-all duration-300 bg-white/50 backdrop-blur-sm"
+                  className="w-full pl-10 sm:pl-12 pr-3 sm:pr-4 py-3 sm:py-4 mb-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-900 focus:border-transparent transition-all duration-300 bg-white/50 backdrop-blur-sm"
                   required
                 />
               </div>
@@ -156,7 +149,7 @@ const ContactUs = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="Your Email" 
-                  className="w-full pl-10 sm:pl-12 pr-3 sm:pr-4 py-3 sm:py-4 mb-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-green focus:border-transparent transition-all duration-300 bg-white/50 backdrop-blur-sm"
+                  className="w-full pl-10 sm:pl-12 pr-3 sm:pr-4 py-3 sm:py-4 mb-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-900 focus:border-transparent transition-all duration-300 bg-white/50 backdrop-blur-sm"
                   required
                 />
               </div>
@@ -171,7 +164,7 @@ const ContactUs = () => {
                   value={formData.phone}
                   onChange={handleInputChange}
                   placeholder="Your Phone" 
-                  className="w-full pl-10 sm:pl-12 pr-3 sm:pr-4 py-3 sm:py-4 mb-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-green focus:border-transparent transition-all duration-300 bg-white/50 backdrop-blur-sm"
+                  className="w-full pl-10 sm:pl-12 pr-3 sm:pr-4 py-3 sm:py-4 mb-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-900 focus:border-transparent transition-all duration-300 bg-white/50 backdrop-blur-sm"
                   required
                 />
               </div>
@@ -183,14 +176,14 @@ const ContactUs = () => {
                   onChange={handleInputChange}
                   placeholder="Your Message" 
                   rows="5" 
-                  className="w-full px-3 sm:px-4 py-3 sm:py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-green focus:border-transparent transition-all duration-300 bg-white/50 backdrop-blur-sm resize-none"
+                  className="w-full px-3 sm:px-4 py-3 sm:py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-900 focus:border-transparent transition-all duration-300 bg-white/50 backdrop-blur-sm resize-none"
                   required
                 ></textarea>
               </div>
               
               <button 
                 type="submit" 
-                className="w-full bg-gradient-to-r from-brand-green to-emerald-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group mt-2"
+                className="w-full bg-gradient-to-r from-yellow-900 to-yellow-700 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group mt-2"
               >
                 <FaPaperPlane className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 <span>Send Message</span>

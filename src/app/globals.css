@@ -5,8 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #6A8F4D;
-  --primary-dark: #5A7F3D;
+  --primary: #C2B280; /* light brown */
+  --primary-dark: #A89F7B; /* darker light brown */
   --secondary: #C82828;
   --secondary-dark: #B81818;
   --accent: #D4AF37;
@@ -15,7 +15,7 @@
   --muted-foreground: #737373;
   --border: #E5E5E5;
   --input: #F5F5F5;
-  --ring: #6A8F4D;
+  --ring: #C2B280;
   --radius: 0.5rem;
 }
 
@@ -73,24 +73,24 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #6A8F4D;
+  background: #C2B280;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #5A7F3D;
+  background: #A89F7B;
 }
 
 /* Focus styles */
 *:focus {
-  outline: 2px solid #6A8F4D;
+  outline: 2px solid #C2B280;
   outline-offset: 2px;
 }
 
 /* Button focus styles */
 button:focus,
 a:focus {
-  outline: 2px solid #6A8F4D;
+  outline: 2px solid #C2B280;
   outline-offset: 2px;
 }
 
@@ -109,7 +109,7 @@ a {
 }
 
 a:hover {
-  color: #6A8F4D;
+  color: #C2B280;
 }
 
 /* Utility classes */
@@ -135,7 +135,7 @@ a:hover {
 
 /* Custom selection */
 ::selection {
-  background: #6A8F4D;
+  background: #C2B280;
   color: white;
 }
 

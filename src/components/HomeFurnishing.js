@@ -14,7 +14,7 @@ const homeFurnishingItems = [
 
 const HomeFurnishing = () => {
   return (
-    <ProductGrid title="Home Furnishing Products" items={homeFurnishingItems} />
+    <ProductGrid title="Home Furnishing Products" description="Comfort meets style in every piece" items={homeFurnishingItems} />
   );
 };
 

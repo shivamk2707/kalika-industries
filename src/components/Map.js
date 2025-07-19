@@ -24,7 +24,7 @@ const Map = () => {
         <div className="absolute top-4 left-4 right-4 sm:left-8 sm:right-8 lg:left-12 lg:right-12">
           <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-100/50 p-4 sm:p-6 max-w-sm">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-brand-green to-emerald-600 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-yellow-900 to-yellow-700 rounded-xl flex items-center justify-center">
                 <FaMapMarkerAlt className="text-white text-lg" />
               </div>
               <div>
@@ -35,20 +35,20 @@ const Map = () => {
             
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sm">
-                <FaDirections className="text-brand-green w-4 h-4" />
+                <FaDirections className="text-yellow-900 w-4 h-4" />
                 <span className="text-gray-700">Get Directions</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
-                <FaPhone className="text-brand-green w-4 h-4" />
+                <FaPhone className="text-yellow-900 w-4 h-4" />
                 <span className="text-gray-700">+91 9850004078</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
-                <FaGlobe className="text-brand-green w-4 h-4" />
+                <FaGlobe className="text-yellow-900 w-4 h-4" />
                 <span className="text-gray-700">www.kalikafurniture.com</span>
               </div>
             </div>
             
-            <button className="w-full mt-4 bg-gradient-to-r from-brand-green to-emerald-600 text-white font-semibold py-2 px-4 rounded-xl hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+            <button className="w-full mt-4 bg-gradient-to-r from-yellow-900 to-yellow-700 text-white font-semibold py-2 px-4 rounded-xl hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
               <FaDirections className="w-4 h-4" />
               <span>Get Directions</span>
             </button>
@@ -75,43 +75,6 @@ const Map = () => {
                   <div className="text-xs opacity-75">Happy Customers</div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Additional info section */}
-      <div className="bg-white py-8 sm:py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-gradient-to-br from-brand-green to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <FaMapMarkerAlt className="text-white text-2xl" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Showroom Location</h3>
-              <p className="text-gray-600">
-                Visit our showroom to explore our complete furniture collection
-              </p>
-            </div>
-            
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-gradient-to-br from-brand-green to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <FaPhone className="text-white text-2xl" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
-              <p className="text-gray-600">
-                Speak with our furniture experts for personalized assistance
-              </p>
-            </div>
-            
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-gradient-to-br from-brand-green to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <FaGlobe className="text-white text-2xl" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Online Store</h3>
-              <p className="text-gray-600">
-                Browse our complete catalog online and order from anywhere
-              </p>
             </div>
           </div>
         </div>

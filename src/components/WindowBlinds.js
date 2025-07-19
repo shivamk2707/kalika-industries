@@ -12,7 +12,7 @@ const blindItems = [
 
 const WindowBlinds = () => {
   return (
-    <ProductGrid title="Window Blinds" items={blindItems} />
+    <ProductGrid title="Window Blinds" description="Modern blinds for light control and sleek design" items={blindItems} />
   );
 };
 

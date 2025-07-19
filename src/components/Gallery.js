@@ -71,28 +71,21 @@ const Gallery = () => {
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 via-white to-gray-50 relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.03),transparent_50%)]"></div>
-      <div className="absolute top-0 right-1/4 w-48 sm:w-96 h-48 sm:h-96 bg-gradient-to-bl from-brand-green/5 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-1/4 w-48 sm:w-96 h-48 sm:h-96 bg-gradient-to-tr from-emerald-500/5 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(194,178,128,0.03),transparent_50%)]"></div>
+      <div className="absolute top-0 right-1/4 w-48 sm:w-96 h-48 sm:h-96 bg-gradient-to-bl from-yellow-900/5 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-1/4 w-48 sm:w-96 h-48 sm:h-96 bg-gradient-to-tr from-yellow-700/5 to-transparent rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-brand-green to-emerald-600 rounded-xl sm:rounded-2xl mb-4 sm:mb-6 shadow-lg">
-            <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 tracking-tight leading-tight">
+        <div className="text-center mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Our Gallery
-          </h2>
-          <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6 sm:mb-8">
-            <div className="w-8 sm:w-16 h-0.5 bg-gradient-to-r from-transparent to-brand-green rounded-full"></div>
-            <div className="w-12 sm:w-24 h-1 sm:h-1.5 bg-gradient-to-r from-brand-green to-emerald-500 rounded-full shadow-sm"></div>
-            <div className="w-8 sm:w-16 h-0.5 bg-gradient-to-l from-transparent to-emerald-500 rounded-full"></div>
-          </div>
-          <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed px-4">
+            </h2>
+            <div className="w-24 h-1 bg-gray-300 mx-auto mb-6"></div>
+            <p className="text-gray-600 max-w-2xl mx-auto">
             Explore our stunning collection of furniture and interior designs
-          </p>
+            </p>
+          </div>
         </div>
         
         {/* Responsive grid layout */}
@@ -144,7 +137,7 @@ const Gallery = () => {
                 </div>
                 
                 {/* Glow effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-brand-green/20 to-emerald-500/20 rounded-xl sm:rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-yellow-900/20 to-yellow-700/20 rounded-xl sm:rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
               </div>
               
               {/* Click handler */}
