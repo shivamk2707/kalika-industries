@@ -33,7 +33,7 @@ const AboutUs = () => {
               <div className="relative overflow-hidden rounded-3xl shadow-xl transform group-hover:scale-[1.02] transition-transform duration-500 border border-gray-100">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent z-10"></div>
                 <Image
-                  src="https://img.freepik.com/premium-photo/industrial-building_1304147-76656.jpg?ga=GA1.1.990952046.1750501572&semt=ais_hybrid&w=740"
+                  src="/images/20231111_202307.jpg"
                   alt="About us"
                   width={600}
                   height={400}
@@ -101,8 +101,7 @@ const AboutUs = () => {
                 <p className="text-gray-700 leading-relaxed">
                   At Kalika Furniture, we understand that every home is unique,
                   and every family has different needs. That&apos;s why we offer a
-                  comprehensive range of furniture including sofas, beds, dining
-                  sets, wardrobes, curtains, blinds, and mattresses. Our expert
+                  comprehensive range of furniture including sofas, beds. Our expert
                   design team works closely with customers to create
                   personalized solutions that match their style preferences and
                   budget requirements.
@@ -113,7 +112,7 @@ const AboutUs = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 gap-4  mt-2">
               <div className="bg-white/90 rounded-xl p-4 text-center border border-gray-100 shadow-sm">
-                <div className="text-3xl font-bold text-yellow-600">5000+</div>
+                <div className="text-3xl font-bold text-yellow-600">3000+</div>
                 <div className="text-sm text-gray-600">Happy Customers</div>
               </div>
               <div className="bg-white/90 rounded-xl p-4 text-center border border-gray-100 shadow-sm">
@@ -124,7 +123,8 @@ const AboutUs = () => {
 
             {/* Call to action */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="px-8 py-4 bg-gradient-to-r from-yellow-700 to-yellow-500 text-white font-semibold rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 hover:from-yellow-600 hover:to-yellow-400">
+              <a href="/products">
+                <button className="px-8 py-4 bg-gradient-to-r from-yellow-700 to-yellow-500 text-white font-semibold rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 hover:from-yellow-600 hover:to-yellow-400">
                 <span>Explore Our Collection</span>
                 <svg
                   className="w-5 h-5"
@@ -140,6 +140,7 @@ const AboutUs = () => {
                   />
                 </svg>
               </button>
+              </a>
               <button className="px-8 py-4 border-2 border-yellow-600 text-yellow-600 font-semibold rounded-2xl hover:bg-yellow-50 transition-all duration-300 flex items-center justify-center gap-2 hover:border-yellow-500 hover:text-yellow-500">
                 <span>Contact Our Team</span>
                 <svg

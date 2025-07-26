@@ -12,9 +12,9 @@ import {
 const furnitureItems = [
   {
     id: 1,
-    name: "Modern Bed Frame",
+    name: "Modern Bed",
     image:
-      "https://images.unsplash.com/photo-1635594202056-9ea3b497e5c0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9kZXJuJTIwYmVkc3xlbnwwfDJ8MHx8fDA%3D",
+      "/images/bed.png",
     price: "₹25,999",
     originalPrice: "₹32,999",
     rating: 4.5,
@@ -24,9 +24,9 @@ const furnitureItems = [
   },
   {
     id: 2,
-    name: "Luxury Sofa Set",
+    name: "Sofa Set",
     image:
-      "https://images.unsplash.com/photo-1729086046027-09979ade13fd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fFNvZmElMjBTZXR8ZW58MHwyfDB8fHww",
+      "/images/sofa.jpg",
     price: "₹45,999",
     originalPrice: "₹58,999",
     rating: 4.8,
@@ -36,9 +36,9 @@ const furnitureItems = [
   },
   {
     id: 3,
-    name: "Elegant Dining Table",
+    name: "TV Showcase",
     image:
-      "https://images.unsplash.com/photo-1688287398986-3d6dcd55ef8d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fERpbmluZyUyMFNldHxlbnwwfDJ8MHx8fDA%3D",
+      "/images/tv_showcase2.jpg",
     price: "₹18,999",
     originalPrice: "₹24,999",
     rating: 4.3,
@@ -48,9 +48,9 @@ const furnitureItems = [
   },
   {
     id: 4,
-    name: "Shoe Storage Rack",
+    name: "Corner Table",
     image:
-      "https://img.freepik.com/premium-photo/shoe-rack-open-shoe-rack-furniture-home-furniture-indian-furniture_471440-17.jpg?ga=GA1.1.990952046.1750501572&semt=ais_hybrid&w=740",
+      "/images/corner_table.png",
     price: "₹3,999",
     originalPrice: "₹5,999",
     rating: 4.1,
@@ -60,9 +60,9 @@ const furnitureItems = [
   },
   {
     id: 5,
-    name: "Vanity Dressing Table",
+    name: "Cupboard",
     image:
-      "https://img.freepik.com/free-photo/3d-rendering-classic-interior_23-2150943430.jpg?ga=GA1.1.990952046.1750501572&semt=ais_hybrid&w=740",
+      "/images/coubourd.jpg",
     price: "₹12,999",
     originalPrice: "₹16,999",
     rating: 4.6,
@@ -72,9 +72,9 @@ const furnitureItems = [
   },
   {
     id: 6,
-    name: "Convertible Sofa Bed",
+    name: "Dressing Table",
     image:
-      "https://img.freepik.com/premium-photo/modern-bedroom-interior-minimal-style-3d-render_907437-1215.jpg?ga=GA1.1.990952046.1750501572&semt=ais_hybrid&w=740",
+      "/images/dressing_table.jpg",
     price: "₹28,999",
     originalPrice: "₹35,999",
     rating: 4.4,
@@ -84,9 +84,9 @@ const furnitureItems = [
   },
   {
     id: 7,
-    name: "Walk-in Wardrobe",
+    name: "Office Setup",
     image:
-      "https://img.freepik.com/premium-photo/deluxe-pleasant-walk-closet-interior-design_542613-245.jpg?ga=GA1.1.990952046.1750501572&semt=ais_hybrid&w=740",
+      "/images/office_setup.jpg",
     price: "₹35,999",
     originalPrice: "₹45,999",
     rating: 4.7,
@@ -96,63 +96,15 @@ const furnitureItems = [
   },
   {
     id: 8,
-    name: "Traditional Wooden Divan",
+    name: "Computer Table",
     image:
-      "https://img.freepik.com/premium-photo/stylish-modern-brown-color-bed-2_849875-14.jpg?ga=GA1.1.990952046.1750501572&semt=ais_hybrid&w=740",
+      "/images/computer_table.jpg",
     price: "₹22,999",
     originalPrice: "₹28,999",
     rating: 4.2,
     reviews: 112,
     discount: 21,
     category: "Wooden Divan",
-  },
-  {
-    id: 9,
-    name: "Glass Center Table",
-    image:
-      "https://img.freepik.com/premium-photo/wooden-table_940887-69.jpg?ga=GA1.1.990952046.1750501572&semt=ais_hybrid&w=740",
-    price: "₹8,999",
-    originalPrice: "₹11,999",
-    rating: 4.0,
-    reviews: 145,
-    discount: 25,
-    category: "Center Table",
-  },
-  {
-    id: 10,
-    name: "Side Table Set",
-    image:
-      "https://img.freepik.com/premium-photo/closeup-coffee-cup-sweets-bedside-table-bright-bedroom-interior-3d-rendering_208753-774.jpg?ga=GA1.1.990952046.1750501572&semt=ais_hybrid&w=740",
-    price: "₹5,999",
-    originalPrice: "₹7,999",
-    rating: 4.3,
-    reviews: 89,
-    discount: 25,
-    category: "Coffee & Side Table",
-  },
-  {
-    id: 11,
-    name: "Ergonomic Office Chair",
-    image:
-      "https://img.freepik.com/premium-photo/outstanding-white-working-chair_40193-192.jpg?ga=GA1.1.990952046.1750501572&semt=ais_hybrid&w=740",
-    price: "₹9,999",
-    originalPrice: "₹12,999",
-    rating: 4.5,
-    reviews: 167,
-    discount: 23,
-    category: "Office Chair",
-  },
-  {
-    id: 12,
-    name: "TV Entertainment Unit",
-    image:
-      "https://img.freepik.com/premium-photo/3d-model-furniture-cabinet-tv-stands-3d-model_922528-609.jpg?ga=GA1.1.990952046.1750501572&semt=ais_hybrid&w=740",
-    price: "₹15,999",
-    originalPrice: "₹19,999",
-    rating: 4.4,
-    reviews: 134,
-    discount: 20,
-    category: "TV Cabinet",
   },
 ];
 
@@ -269,25 +221,25 @@ const Furniture = () => {
 
               {/* Content */}
               <div className="p-6">
-                <div className="mb-2">
+                {/* <div className="mb-2">
                   <span className="text-xs text-yellow-900 font-semibold uppercase tracking-wide">
                     {item.category}
                   </span>
-                </div>
+                </div> */}
 
                 <h3 className="text-lg font-semibold text-neutral-900 mb-2 line-clamp-2">
                   {item.name}
                 </h3>
 
                 {/* Rating */}
-                <div className="flex items-center gap-2 mb-3">
+                {/* <div className="flex items-center gap-2 mb-3">
                   <div className="flex items-center gap-1">
                     {renderStars(item.rating)}
                   </div>
                   <span className="text-sm text-neutral-500">
                     ({item.reviews} reviews)
                   </span>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}

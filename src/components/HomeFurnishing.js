@@ -1,21 +1,85 @@
-import React from 'react';
-import ProductGrid from './ProductGrid';
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import ProductGrid from "./ProductGrid";
 
 const homeFurnishingItems = [
-  { name: 'Carpets', image: 'https://img.freepik.com/premium-photo/carpets-upholstery_1134661-4200.jpg?ga=GA1.1.990952046.1750501572&semt=ais_hybrid&w=740' },
-  { name: 'Floor Mats', image: 'https://img.freepik.com/premium-photo/bath-mats_933597-225.jpg?ga=GA1.1.990952046.1750501572&semt=ais_hybrid&w=740' },
-  { name: 'Bed Sheets', image: 'https://img.freepik.com/premium-photo/cozy-baby-cot-with-pink-patchwork-blanket-baby-bedding-bedding-textile-nursery-nap-sleep-time_370028-1140.jpg?ga=GA1.1.990952046.1750501572&semt=ais_hybrid&w=740' },
-  { name: 'Bed Covers', image: 'https://img.freepik.com/premium-photo/bed-isolated-white-background-interior-furniture-3d-illustration-cg-render_375001-10324.jpg?ga=GA1.1.990952046.1750501572&semt=ais_hybrid&w=740' },
-  { name: 'Dining Linens', image: 'https://plus.unsplash.com/premium_photo-1670869816874-5a22db823d6f?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-  { name: 'Blankets & Comforters', image: 'https://img.freepik.com/premium-photo/close-up-coffee-cup-table-home_1048944-21530684.jpg?ga=GA1.1.990952046.1750501572&semt=ais_hybrid&w=740' },
-  { name: 'Cushion / Pillow & Covers', image: 'https://img.freepik.com/premium-photo/bed-isolated-white-background-interior-furniture-3d-illustration-cg-render_375001-10301.jpg?ga=GA1.1.990952046.1750501572&semt=ais_hybrid&w=740' },
-  { name: 'Towels', image: 'https://img.freepik.com/premium-photo/close-up-colored-pencils-white-background_1048944-4547293.jpg?ga=GA1.1.990952046.1750501572&semt=ais_hybrid&w=740' },
+  {
+    name: "TV Showcase",
+    image: "/images/tv_showcase.jpg",
+  },
+  {
+    name: "Modern Sofas",
+    image: "/images/sofa.jpg",
+  },
+  {
+    name: "Bedss",
+    image: "/images/bed.png",
+  },
+  {
+    name: "Office Setups",
+    image: "/images/office_setup.jpg",
+  },
+  {
+    name: "Cupboards",
+    image: "/images/coubourd.jpg",
+  },
 ];
 
 const HomeFurnishing = () => {
   return (
-    <ProductGrid title="Home Furnishing Products" description="Comfort meets style in every piece" items={homeFurnishingItems} />
+    <>
+      <div className="py-12 mt-44 bg-white">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Home Furnishing Products
+            </h2>
+            <div className="w-24 h-1 bg-gray-300 mx-auto mb-6"></div>
+            <p className="text-gray-600 max-w-2xl mx-auto">All over furniture solutions for home Furnishing</p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {homeFurnishingItems.map((item, index) => (
+              <div key={index} className="bg-white border border-gray-200">
+                <div className="relative aspect-square p-4 flex items-center justify-center">
+                  <Image
+                    src={item.image}
+                    alt="product"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="flex justify-center my-2">
+        <a href="/products">
+          <button className="px-8 py-4 mb-8 bg-gradient-to-r from-yellow-700 to-yellow-500 text-white font-semibold rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 hover:from-yellow-600 hover:to-yellow-400">
+            <span>View All Products</span>
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </button>
+        </a>
+      </div>
+    </>
   );
 };
 
-export default HomeFurnishing; 
+export default HomeFurnishing;

@@ -40,7 +40,7 @@ const ContactUs = () => {
     {
       icon: <FaPhone className="text-2xl sm:text-3xl" />,
       title: 'Call Us',
-      details: ['+91 9850004078'],
+      details: ['+91 7350035593'],
       color: 'from-yellow-900 to-yellow-700' // light brown gradient
     },
     {

@@ -97,10 +97,10 @@ const Header = () => {
               <div className="flex items-center group">
                 <FaPhone className="text-brand-green text-sm sm:text-base transition-transform group-hover:scale-110 mr-1 sm:mr-2" />
                 <a
-                  href="tel:+919054768724"
+                  href="tel:+917350035593"
                   className="text-xs sm:text-sm group-hover:text-brand-green transition-colors whitespace-nowrap"
                 >
-                  +91 9054768724
+                  +91 7350035593
                 </a>
               </div>
 
@@ -195,9 +195,9 @@ const Header = () => {
                 >
                   <div className="relative">
                     <FaHeart className="text-2xl text-neutral-600 group-hover:text-brand-red transition-colors" />
-                    <span className="absolute -top-3 -right-3 bg-brand-red text-white bg-green-900 text-xs rounded-full w-5 h-5 flex items-center justify-center shadow-md group-hover:animate-pulse ring-2 ring-white">
+                    {/* <span className="absolute -top-3 -right-3 bg-brand-red text-white bg-green-900 text-xs rounded-full w-5 h-5 flex items-center justify-center shadow-md group-hover:animate-pulse ring-2 ring-white">
                       3
-                    </span>
+                    </span> */}
                   </div>
                   <span className="text-xs mt-1 text-neutral-600 group-hover:text-brand-green transition-colors">
                     Wishlist
@@ -234,9 +234,9 @@ const Header = () => {
                 className="relative p-2 hover:bg-neutral-100 rounded-full transition-colors"
               >
                 <FaShoppingCart className="text-xl text-neutral-600" />
-                <span className="absolute -top-1 -right-1 bg-brand-red text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
+                {/* <span className="absolute -top-1 -right-1 bg-brand-red text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
                   5
-                </span>
+                </span> */}
               </a>
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -400,7 +400,7 @@ const Header = () => {
                     className="block py-3 px-4 hover:bg-neutral-50 rounded-lg transition-colors flex items-center"
                   >
                     <FaHeart className="mr-3 text-brand-red" />
-                    <span>Wishlist (3)</span>
+                    <span>Wishlist</span>
                   </a>
                 </div>
               </div>
@@ -416,10 +416,10 @@ const Header = () => {
                       <FaPhone className="text-brand-green" />
                     </div>
                     <a
-                      href="tel:+918888888888"
+                      href="tel:+917350035593"
                       className="hover:text-brand-green transition-colors"
                     >
-                      +91 9056543127
+                      +91 7350035593
                     </a>
                   </div>
                   <div className="flex items-center space-x-3">
