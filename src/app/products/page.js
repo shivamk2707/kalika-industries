@@ -17,7 +17,7 @@ const homeFurnishingItems = [
   { image: "/images/allImages/20231108_204344.jpg" },
   { image: "/images/allImages/20231111_185350.jpg" },
   { image: "/images/allImages/20240630_101003.jpg" },
-  { image: "/images/allImages/20240630_101308 .jpg" },
+  { image: "/images/allImages/20240630_101308.jpg" },
   { image: "/images/allImages/20240630_101323.jpg" },
   { image: "/images/allImages/IMG_20210329_133834.jpg" },
   { image: "/images/allImages/IMG_20210329_143640.jpg" },
