@@ -1,6 +1,10 @@
 import { Inter, Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import ContactUs from "@/components/ContactUs";
+import Map from "@/components/Map";
+import Footer from "@/components/Footer";
+import ManufacturingSection from "@/components/ManufacturingSection";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -24,7 +28,7 @@ const poppins = Poppins({
 export const metadata = {
   title: "Kalika Furniture - Premium Furniture & Home Furnishings",
   description:
-    "Discover exquisite furniture, curtains, blinds, mattresses, and home furnishings from Kalika Furniture. Quality craftsmanship meets modern design. Free delivery across India.",
+    "Discover exquisite furniture, curtains, blinds, mattresses, and home furnishings from Kalika Furniture. Quality craftsmanship meets modern design.",
   keywords:
     "furniture, home furnishings, sofas, beds, dining sets, curtains, blinds, mattresses, kalika furniture, interior design, furniture store",
   authors: [{ name: "Kalika Furniture" }],
@@ -122,9 +126,14 @@ export default function RootLayout({ children }) {
         <meta name="msapplication-config" content="/browserconfig.xml" />
       </head>
       <body className="antialiased bg-white text-neutral-900">
-          <div id="root">
-            <Header />
-            {children}</div>
+        <div id="root">
+          <Header />
+          {children}
+          <ContactUs />
+          <ManufacturingSection />
+          <Map />
+          <Footer />
+        </div>
       </body>
     </html>
   );

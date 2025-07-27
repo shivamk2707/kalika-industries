@@ -44,10 +44,6 @@ const Map = () => {
                 <span className="text-gray-700">Get Directions</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
-                <FaPhone className="text-yellow-900 w-4 h-4" />
-                <span className="text-gray-700">+91 7350035593</span>
-              </div>
-              <div className="flex items-center gap-3 text-sm">
                 <FaGlobe className="text-yellow-900 w-4 h-4" />
                 <span className="text-gray-700">www.kalikaindustries.com</span>
               </div>

@@ -15,7 +15,7 @@ const AboutUs = () => {
         <div className="text-center mb-16">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Crafting Quality Since 2008
+                  Crafting Quality Since 1995
                 </h2>
                 <div className="w-24 h-1 bg-gray-300 mx-auto mb-6"></div>
                 <p className="text-gray-600 max-w-2xl mx-auto">
@@ -141,22 +141,6 @@ const AboutUs = () => {
                 </svg>
               </button>
               </a>
-              <button className="px-8 py-4 border-2 border-yellow-600 text-yellow-600 font-semibold rounded-2xl hover:bg-yellow-50 transition-all duration-300 flex items-center justify-center gap-2 hover:border-yellow-500 hover:text-yellow-500">
-                <span>Contact Our Team</span>
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
-              </button>
             </div>
           </div>
         </div>

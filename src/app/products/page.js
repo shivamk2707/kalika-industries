@@ -2,6 +2,9 @@ import React from "react";
 import Image from "next/image";
 import ProductGrid from "../../components/ProductGrid";
 import Header from "@/components/Header";
+import ContactUs from "@/components/ContactUs";
+import Map from "@/components/Map";
+import Footer from "@/components/Footer";
 
 const homeFurnishingItems = [
   { image: "/images/allImages/116138.jpg" },
@@ -100,6 +103,7 @@ const ProductsGallery = () => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 };

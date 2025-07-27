@@ -1,30 +1,36 @@
 "use client";
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const Videos = () => {
   const [activeVideo, setActiveVideo] = useState(0);
+  const router = useRouter();
 
   const videos = [
     {
-      id: 'sym-qV0DqVw',
-      title: 'Modern Bed Designing With Decor',
-      description: 'Discover the latest trends in modern bed design and decoration',
-      thumbnail: 'https://img.youtube.com/vi/sym-qV0DqVw/maxresdefault.jpg'
+      id: 'T9fko7dSiBY',
+      title: 'Premium Keyboard Exploration',
+      description: 'Discover the features and craftsmanship of our premium keyboard collection',
+      thumbnail: 'https://img.youtube.com/vi/T9fko7dSiBY/maxresdefault.jpg'
     },
     {
-      id: 'GfzPz__i4wA',
-      title: 'Modern Living Room Furniture Design',
-      description: 'Transform your living space with contemporary furniture designs',
-      thumbnail: 'https://img.youtube.com/vi/GfzPz__i4wA/maxresdefault.jpg'
+      id: 'ABUG3F6Jx2k',
+      title: 'Our Manufacturing Facility Tour',
+      description: 'Take an exclusive look inside our state-of-the-art production facility',
+      thumbnail: 'https://img.youtube.com/vi/ABUG3F6Jx2k/maxresdefault.jpg'
     },
     {
-      id: 'dQw4w9WgXcQ',
-      title: 'Minimalist Home Office Setup',
-      description: 'Create a productive workspace with minimalist design principles',
-      thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg'
+      id: 'xmAXNNFJ8H4',
+      title: 'Product Showcase Collection',
+      description: 'Explore our latest product lineup and innovative designs',
+      thumbnail: 'https://img.youtube.com/vi/xmAXNNFJ8H4/maxresdefault.jpg'
     }
   ];
+
+  const handleSubscribe = () => {
+    window.open('https://www.youtube.com/@kalika__furniture', '_blank');
+  };
 
   return (
     <section className="py-8 sm:py-12 bg-gradient-to-br from-slate-50 via-white to-gray-50 relative overflow-hidden">
@@ -37,11 +43,11 @@ const Videos = () => {
         <div className="text-center mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Featured Videos
+              Featured Videos
             </h2>
             <div className="w-24 h-1 bg-gray-300 mx-auto mb-6"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
-            Watch our latest videos showcasing modern furniture designs and home decoration ideas
+              Explore our product journey from manufacturing to final showcase
             </p>
           </div>
         </div>
@@ -78,7 +84,7 @@ const Videos = () => {
                 
                 {/* Video info */}
                 <div className="p-4 sm:p-5">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 group-hover:text-brand-green transition-colors duration-200">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 group-hover:text-yellow-700 transition-colors duration-200">
                     {video.title}
                   </h3>
                   <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-3">
@@ -103,7 +109,10 @@ const Videos = () => {
                       </div>
                     </div>
                     
-                    <button className="px-3 py-1.5 bg-gradient-to-r from-yellow-900 to-yellow-700 text-white text-xs font-semibold rounded-lg hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-1">
+                    <button 
+                      className="px-3 py-1.5 bg-gradient-to-r from-yellow-900 to-yellow-700 text-white text-xs font-semibold rounded-lg hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-1"
+                      onClick={() => window.open(`https://www.youtube.com/watch?v=${video.id}`, '_blank')}
+                    >
                       <span>Watch</span>
                       <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -126,9 +135,12 @@ const Videos = () => {
               Want to See More?
             </h3>
             <p className="text-gray-600 mb-4 max-w-2xl mx-auto text-sm">
-              Subscribe to our channel for the latest furniture design trends and home decoration tips
+              Subscribe to our channel for the latest product showcases and behind-the-scenes content
             </p>
-            <button className="px-6 py-3 bg-gradient-to-r from-yellow-900 to-yellow-700 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2 mx-auto text-sm">
+            <button 
+              className="px-6 py-3 bg-gradient-to-r from-yellow-900 to-yellow-700 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2 mx-auto text-sm"
+              onClick={handleSubscribe}
+            >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
               </svg>

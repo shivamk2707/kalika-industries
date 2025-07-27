@@ -6,31 +6,18 @@ import {
   FaUser,
   FaHeart,
   FaShoppingCart,
-  FaSearch,
   FaBars,
   FaTimes,
   FaWhatsapp,
   FaFacebookF,
-  FaFacebook,
   FaInstagram,
   FaTwitter,
-  FaChevronDown,
-  FaChevronRight,
 } from "react-icons/fa";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 import navLinks from "../data/navLinks";
-import megaMenuData from "../data/megaMenuData";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [activeMenu, setActiveMenu] = useState(null);
-  const [searchFocused, setSearchFocused] = useState(false);
-  const [hovered, setHovered] = useState(null);
-  const [megaMenuOpen, setMegaMenuOpen] = useState(false);
   const mobileMenuRef = useRef(null);
 
   useEffect(() => {
@@ -70,11 +57,6 @@ const Header = () => {
     };
   }, [isMobileMenuOpen]);
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    console.log("Searching for:", searchQuery);
-  };
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -93,28 +75,14 @@ const Header = () => {
           <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-4">
             {/* Contact Info - Left Side */}
             <div className="flex flex-col xs:flex-row items-center justify-center gap-2 sm:gap-4">
-              {/* Phone */}
-              <div className="flex items-center group">
-                <FaPhone className="text-brand-green text-sm sm:text-base transition-transform group-hover:scale-110 mr-1 sm:mr-2" />
-                <a
-                  href="tel:+917350035593"
-                  className="text-xs sm:text-sm group-hover:text-brand-green transition-colors whitespace-nowrap"
-                >
-                  +91 7350035593
-                </a>
-              </div>
-
-              {/* Divider - Hidden on mobile */}
-              <span className="hidden xs:inline-block h-4 w-px bg-neutral-400 mx-1 sm:mx-2"></span>
-
               {/* Email - Responsive layout */}
               <div className="flex items-center group">
                 <FaEnvelope className="text-brand-green text-sm sm:text-base transition-transform group-hover:scale-110 mr-1 sm:mr-2" />
                 <a
-                  href="mailto:kalikafurniture@gmail.com"
+                  href="mailto:sales@kalikaindustries.com"
                   className="text-xs sm:text-sm group-hover:text-brand-green transition-colors break-all sm:break-normal"
                 >
-                  kalikafurniture@gmail.com
+                  sales@kalikaindustries.com
                 </a>
               </div>
             </div>
@@ -151,38 +119,9 @@ const Header = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="text-2xl md:text-3xl font-bold text-brand-red font-display hover:scale-105 transition-transform">
-                <span className="text-yellow-900">Kalika </span>Furniture
+              <div className="text-5xl md:text-6xl font-bold text-brand-red font-display hover:scale-105 transition-transform">
+                <span className="text-yellow-900 ">Kalika </span>Furniture
               </div>
-            </div>
-
-            {/* Desktop Search - Enhanced */}
-            <div className="hidden lg:flex flex-1 max-w-xl mx-8">
-              <form
-                onSubmit={handleSearch}
-                className={`w-full relative transition-all duration-300 ${
-                  searchFocused ? "scale-105" : ""
-                }`}
-              >
-                <input
-                  type="text"
-                  placeholder="Search for furniture, decor and more..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  onFocus={() => setSearchFocused(true)}
-                  onBlur={() => setSearchFocused(false)}
-                  className="w-full px-5 py-3 pr-14 border-2 border-neutral-200 rounded-full focus:ring-2 focus:ring-yellow-900 focus:border-transparent shadow-sm hover:shadow-md transition-all duration-300"
-                />
-                <button
-                  type="submit"
-                  className={`absolute right-3 top-1/2 transform -translate-y-1/2 bg-yellow-900 text-white p-2.5 rounded-full hover:bg-yellow-700 transition-all duration-300 flex items-center justify-center ${
-                    searchFocused ? "scale-110" : ""
-                  }`}
-                  style={{ width: "40px", height: "40px" }}
-                >
-                  <FaSearch className="text-lg" />
-                </button>
-              </form>
             </div>
 
             {/* Desktop Actions - Enhanced */}
@@ -223,12 +162,6 @@ const Header = () => {
 
             {/* Mobile Actions */}
             <div className="flex lg:hidden items-center space-x-4">
-              <button
-                onClick={() => setIsSearchOpen(!isSearchOpen)}
-                className="p-2 hover:bg-neutral-100 rounded-full transition-colors"
-              >
-                <FaSearch className="text-xl text-neutral-600" />
-              </button>
               <a
                 href="#cart"
                 className="relative p-2 hover:bg-neutral-100 rounded-full transition-colors"
@@ -250,29 +183,6 @@ const Header = () => {
               </button>
             </div>
           </div>
-
-          {/* Mobile Search */}
-          {isSearchOpen && (
-            <div className="lg:hidden mt-4 animate-slide-down">
-              <form onSubmit={handleSearch}>
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Search furniture..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full px-4 py-3 pr-12 border-2 border-neutral-300 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent shadow-sm"
-                  />
-                  <button
-                    type="submit"
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-brand-green text-white p-2 rounded-md hover:bg-brand-dark-green transition-colors"
-                  >
-                    <FaSearch className="text-sm" />
-                  </button>
-                </div>
-              </form>
-            </div>
-          )}
         </div>
       </div>
 
@@ -344,28 +254,6 @@ const Header = () => {
                 </button>
               </div>
 
-              {/* Search in Mobile Menu */}
-              <form
-                onSubmit={handleSearch}
-                className="mb-6 bg-neutral-50 rounded-lg p-1"
-              >
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Search products..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full px-4 py-3 pr-12 bg-white border border-neutral-200 rounded-lg focus:ring-2 focus:ring-brand-green focus:border-transparent"
-                  />
-                  <button
-                    type="submit"
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-brand-green text-white p-2 rounded-md hover:bg-brand-dark-green transition-colors"
-                  >
-                    <FaSearch className="text-sm" />
-                  </button>
-                </div>
-              </form>
-
               {/* Mobile Categories */}
               <div className="mb-6">
                 <h4 className="font-semibold text-neutral-700 mb-2 px-2">
@@ -413,24 +301,13 @@ const Header = () => {
                 <div className="space-y-3 text-sm bg-neutral-50 p-4 rounded-lg">
                   <div className="flex items-center space-x-3">
                     <div className="bg-brand-green/10 p-2 rounded-full">
-                      <FaPhone className="text-brand-green" />
-                    </div>
-                    <a
-                      href="tel:+917350035593"
-                      className="hover:text-brand-green transition-colors"
-                    >
-                      +91 7350035593
-                    </a>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="bg-brand-green/10 p-2 rounded-full">
                       <FaEnvelope className="text-brand-green" />
                     </div>
                     <a
                       href="mailto:Handicraft@Example.com"
                       className="hover:text-brand-green transition-colors"
                     >
-                      kalikafurniture@gmail.com
+                      sales@kalikaindustries.com
                     </a>
                   </div>
                 </div>

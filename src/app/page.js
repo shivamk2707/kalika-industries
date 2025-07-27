@@ -8,6 +8,7 @@ import Videos from "@/components/Videos";
 import ContactUs from "@/components/ContactUs";
 import Map from "@/components/Map";
 import Footer from "@/components/Footer";
+import ManufacturingSection from '@/components/ManufacturingSection';
 
 export default function Home() {
   return (
@@ -16,9 +17,6 @@ export default function Home() {
       <HomeFurnishing />
       <AboutUs />
       <Videos />
-      <ContactUs />
-      <Map />
-      <Footer />
     </main>
   );
 }

@@ -100,7 +100,7 @@ The easiest way to deploy this Next.js app is to use the [Vercel Platform](https
 ## Contact
 
 For any questions or support, please contact:
-- Email: kalikafurniture@gmail.com
+- Email: sales@kalikaindustries.com
 - Phone: +91 7350035593
 
 ## License
