@@ -42,7 +42,7 @@ const ContactUs = () => {
             </h2>
             <div className="w-16 sm:w-20 md:w-24 h-0.5 sm:h-1 bg-gray-300 mx-auto mb-4 sm:mb-6"></div>
             <p className="text-sm xs:text-base sm:text-lg text-gray-600 max-w-xs xs:max-w-sm sm:max-w-md md:max-w-2xl mx-auto px-2 sm:px-0">
-              We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+              We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
             </p>
           </div>
         </div>
