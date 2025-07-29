@@ -5,6 +5,7 @@ import ContactUs from "@/components/ContactUs";
 import Map from "@/components/Map";
 import Footer from "@/components/Footer";
 import ManufacturingSection from "@/components/ManufacturingSection";
+import MetaPixel from "@/components/MetaPixel";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -127,12 +128,15 @@ export default function RootLayout({ children }) {
       </head>
       <body className="antialiased bg-white text-neutral-900">
         <div id="root">
-          <Header />
-          {children}
-          <ContactUs />
-          <ManufacturingSection />
-          <Map />
-          <Footer />
+          <MetaPixel />
+          
+            <Header />
+            {children}
+            <ContactUs />
+            <ManufacturingSection />
+            <Map />
+            <Footer />
+          
         </div>
       </body>
     </html>
